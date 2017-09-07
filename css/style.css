@@ -1,0 +1,88 @@
+/* Table of Contents
+––––––––––––––––––––––––––––––––––––––––––––––
+- General Content
+- Typography
+- Header & Navigation
+- Images & Media
+- Footer
+- Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* General Content
+–––––––––––––––––––––––––––––––––––––––––––––– */
+.green { background-color: #7accc8; }
+.left { margin-left: 0%; }
+.corn { background-color: cornsilk;}
+.form-group { width: 100%; }
+.row { padding: 2%;}
+#search { border: 1px solid black; }
+
+.refine-search {    
+	margin-top: 5%;
+    border: 1px solid black;
+}
+.label-left {
+	font-size: 1.1em;
+    font-weight: normal;
+    padding-left: 4%;
+}
+.range-left {
+	margin: 4%;
+	width: 89%;
+    margin-top: 0%;
+}
+.pull-left {
+	float: left;
+   	padding-left: 4%;
+    font-family: monospace;
+}
+.pull-right {
+    float: right;
+    font-family: monospace;	
+}
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+/* Header & Navigation
+–––––––––––––––––––––––––––––––––––––––––––––– */
+header.main_nav{
+	padding: 1% 0;
+	display: block;
+}
+.searchTitle {
+	margin: 2% auto;
+	text-align: left;
+	font-size: 1.5em;
+	color: crimson;
+	padding: 2px 10px 0 10px;
+}
+.logo{
+	margin: 2% auto;
+	text-align: left;
+	font-size: 2em;
+}
+.logo a{
+	color: #fff;
+	text-decoration: none;
+	border: 3px solid #fff;
+	text-transform: uppercase;
+	padding: 2px 10px 0 10px;
+	margin: 0;
+}
+.logo a:hover{
+	background-color: #fff;
+	color: #7accc8;
+}
+
+/* Images & Media
+–––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––– */
+/* Larger than mobile */

@@ -1,0 +1,139 @@
+{
+	"airports": [
+		{ 
+			"label": "Pune, India (PNQ)", 
+			"value": "PNQ", 
+			"cityId": 2
+		},
+		{ 
+			"label": "Mumbai, India (BOM)",
+			"value": "BOM",
+			"cityId":4 
+		},
+		{ 
+			"label": "Delhi, India (DEL)", 
+			"value": "DEL",
+			"cityId":3 
+		},
+		{ 
+			"label": "Ahmedabad, India (AMD)", 
+			"value": "AMD",
+			"cityId":1
+		},
+		{ 
+			"label": "Bangalore, India (BLR)", 
+			"value": "BLR",
+			"cityId":5 
+		},
+		{ 
+			"label": "Hyderabad, India (HYD)", 
+			"value": "HYD",
+			"cityId":6
+		},
+	],
+    "cities": [
+        {
+            "cityId": 1,
+            "cityName": "Ahmedabad"
+        },
+        {
+            "cityId": 2,
+            "cityName": "Pune"
+        },
+        {
+            "cityId": 3,
+            "cityName": "Delhi"
+        },
+        {
+            "cityId": 4,
+            "cityName": "Mumbai"
+        },
+        {
+            "cityId": 5,
+            "cityName": "Bangalore"
+        },
+        {
+            "cityId": 6,
+            "cityName": "Hyderabad"
+        },              
+    ],
+    "operators": [
+    	{
+    		"operatorId": "op_01",
+    		"operatorName": "SpiceJet",
+    		"logo":"spicejet.jpg"
+    	},
+    	{
+    		"operatorId": "op_02",
+    		"operatorName": "Indigo",
+    		"logo":"indigo.jpg"
+    	},
+    	{
+    		"operatorId": "op_03",
+    		"operatorName": "JetAirways",
+    		"logo":"jetairways.jpg"
+    	},
+    	{
+    		"operatorId": "op_04",
+    		"operatorName": "Air Asia",
+    		"logo":"airasia.jpg"
+    	},
+    	{
+    		"operatorId": "op_05",
+    		"operatorName": "GoAir",
+    		"logo":"goair.jpg"
+    	},
+    	{
+    		"operatorId": "op_06",
+    		"operatorName": "Vistara",
+    		"logo":"vistara.jpg"
+    	}    	    	    	    	    	
+    ],
+    "flights": [
+        {
+			"flightid": "f_01",
+			"operator": "SpiceJet",
+			"depAirport_id": 6,
+			"arrAirport_id": 2,
+			"depDateTime": "10:45 AM",
+			"arrDateTime": "13:00 PM",
+			"duration": "2h 15m",
+			"pnr": "SJ 100",
+			"price": "3000"
+        },
+        {
+			"flightid": "f_02",
+			"operator": "Indigo",
+			"depAirport_id": 6,
+			"arrAirport_id": 2,
+			"depDateTime": "12:45 PM",
+			"arrDateTime": "15:15 PM",
+			"duration": "2h 30m",
+			"pnr": "IN 103",
+			"price": "4500"
+        },
+        {
+			"flightid": "f_03",
+			"operator": "JetAirways",
+			"depAirport_id": 6,
+			"arrAirport_id": 2,
+			"depDateTime": "05:45 AM",
+			"arrDateTime": "07:50 AM",
+			"duration": "2h 05m",
+			"pnr": "JA 111",
+			"price": "7000"
+        },
+        {
+			"flightid": "f_04",
+			"operator": "SpiceJet",
+			"depAirport_id": 6,
+			"arrAirport_id": 2,
+			"depDateTime": "11:00 PM",
+			"arrDateTime": "01:50 AM",
+			"duration": "2h 50m",
+			"pnr": "JA 111",
+			"price": "3560"
+        },         
+
+    ]    	
+}
