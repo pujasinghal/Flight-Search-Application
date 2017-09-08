@@ -1,0 +1,23 @@
+{
+  "name": "fsa",
+  "version": "1.0.0",
+  "description": "This app is created using angular 1",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --port=3033",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pujasinghal/Flight-Search-Application.git"
+  },
+  "author": "puja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pujasinghal/Flight-Search-Application/issues"
+  },
+  "homepage": "https://github.com/pujasinghal/Flight-Search-Application#readme",
+  "dependencies": {
+    "live-server": "^1.2.0"
+  }
+}

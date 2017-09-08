@@ -1,0 +1,47 @@
+.custom-slider.rzslider .rz-bar {
+  background: #ffe4d1;
+  height: 2px;
+}
+.rzslider {
+  height: 7px !important;
+  /*margin-right: -1px !important;*/
+}
+.custom-slider.rzslider .rz-selection {
+  background: darkslategray;
+}
+
+.custom-slider.rzslider .rz-pointer {
+    width: 2.7%;
+    height: 16px;
+    top: auto;
+    bottom: 0;
+    background-color: darkcyan;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.custom-slider.rzslider .rz-pointer:after {
+  display: none;
+}
+
+.custom-slider.rzslider .rz-bubble {
+  bottom: 14px;
+}
+
+.custom-slider.rzslider .rz-limit {
+  font-weight: bold;
+  color: orange;
+}
+
+.custom-slider.rzslider .rz-tick {
+  width: 1px;
+  height: 10px;
+  margin-left: 4px;
+  border-radius: 0;
+  background: #ffe4d1;
+  top: -1px;
+}
+
+.custom-slider.rzslider .rz-tick.rz-selected {
+  background: darkcyan;
+}
