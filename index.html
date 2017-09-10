@@ -1,124 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Flight Search Engine</title>
-  <meta name="description" content="A responsive flight search engine">
-  <meta name="author" content="Puja Singhal">
+	  <!-- Basic Page Needs
+	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	  <meta charset="utf-8">
+	  <title>Flight Search Engine</title>
+	  <meta name="description" content="A responsive flight search engine">
+	  <meta name="author" content="Puja Singhal">
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
-  
-   <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.4.0/rzslider.min.css">
-  <link rel="stylesheet" href="css/custom-slider-style.css">
-<!--   <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/magnific-popup.css"> -->
-  
-  <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.4.0/rzslider.min.js"></script>
-  <script src="scripts/controller/flightApp.js"></script>
-  	
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<!--   <link rel="icon" type="image/png" href="images/favicon.png"> -->
+	  <!-- Mobile Specific Metas
+	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  
+	  <!-- FONT
+	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	  <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+	  <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+	  
+	   <!-- CSS
+	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	  <link rel="stylesheet" href="css/normalize.css">
+	  <link rel="stylesheet" href="css/skeleton.css">
+	  <link rel="stylesheet" href="css/style.css">
+	  	  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css"  rel="stylesheet" type="text/css">
+	  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-  <!-- Inline Style
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <style>
-	.ui-widget-header, .ui-widget-content, .ui-widget.ui-widget-content  { 
-		border: none;
-		background-color: white;
-	}  
-	.ui-tabs .ui-tabs-nav {
-	    padding: 0;
-	}	
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.4.0/rzslider.min.css">
+	  <link rel="stylesheet" href="css/custom-slider-style.css">
+	<!--   <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+	  <link rel="stylesheet" href="css/magnific-popup.css"> -->
+	  
+	  <!-- Scripts
+	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
+	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.4.0/rzslider.min.js"></script>
+	  <script src="scripts/services/fetchService.js"></script>
+	  <script src="scripts/controller/flightApp.js"></script>
+	  <script src="scripts/directives/autocomplete.js"></script>	  
+	  <script src="scripts/directives/searchResults.js"></script>
+		
+	  <!-- Favicon
+	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<!--   <link rel="icon" type="image/png" href="images/favicon.png"> -->
 
-  </style>
-</head>
-<body>
+	  <!-- Inline Style
+	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	  <style>
+		.ui-widget-header, .ui-widget-content, .ui-widget.ui-widget-content  { 
+			border: none;
+			background-color: white;
+		}  
+		.ui-tabs .ui-tabs-nav {
+		    padding: 0;
+		}	
 
-<header class="main_nav green">
-	<div class="container">
-		<div class="twelve columns">
-			<div class="logo"><a href="#">Flight Search Engine</a></div>
+	  </style>
+	</head>
+	<body>
+
+	<header class="main_nav green">
+		<div class="container">
+			<div class="twelve columns">
+				<div class="logo"><a href="#">Flight Search Engine</a></div>
+			</div>
 		</div>
-	</div>
-</header>
+	</header>
 
-<!-- <div class="container main"> -->
 	<div class="row" ng-app="flightModule" ng-controller="FlightCtrl">
 		<div class="four columns">	
-			<!-- <div class="row"> -->
-				<div class="twelve columns">
-					<div id="tabs">
-						<ul>
-						    <li><a href="#search">OneWay</a></li>
-							<li><a href="#search">Return</a></li>
-						</ul>
-						<div id="search" class="border-form">
-							<input id="fromAirport" class="form-group" type="text" placeholder="Enter Origin City" autocomplete="off" required />
-							<input id="toAirport" class="form-group" type="text" placeholder="Enter Destination City" autocomplete="off" required />
-							<input id="depDate" class="form-group" type="date" placeholder="Departure Date" required /> 
-							<input id="retDate" class="form-group" type="date" placeholder="Return Date" required />
-							<input id="passengers" class="form-group" type="number" placeholder="Passengers" min=1 max=10>
-							<button id="btnSearch">Search</button>
-						</div>
-						<div id="refine" class="refine-search">
-							<label class="label-left">Refine flight search</label>
-							<div>
-							    <rzslider class="custom-slider" rz-slider-model="slider.min" 		rz-slider-high="slider.max" 
-							    	rz-slider-options="slider.options"></rzslider>
-							</div>
-						
-						</div>
+			<div class="twelve columns">
+				<div id="tabs">
+					<ul>
+					    <li><a href="#search" ng-click="returnDate(true)">OneWay</a></li>
+						<li><a href="#search" ng-click="returnDate(false)">Return</a></li>
+					</ul>
+					<div id="search" class="border-form">						
+						<input id="fromAirport" class="form-group" type="text" placeholder="Enter Origin City" required auto-complete ng-change="autoComplete(true,false)" ng-model="searchFromCity" />
+						<input id="toAirport" class="form-group" type="text" placeholder="Enter Destination City"auto-complete ng-change="autoComplete(false,true)" ng-model="searchToCity" required />
+						<input id="depDate" class="form-group" type="text" placeholder="Departure Date" onfocus="(this.type='date')" onblur="(this.type='text')" ng-model="depDate.value" ng-change="getDate()" required /> 
+						<input id="retDate" class="form-group" type="text" placeholder="Return Date" onfocus="(this.type='date')" onblur="(this.type='text')" ng-model="arrDate.value" required ng-disabled="returnShow"/>
+						<input id="passengers" class="form-group" type="number" placeholder="Passengers" ng-model="passengersNo" min=1 max=10>
+						<button id="btnSearch" ng-click="searchFlight()">Search</button>					
 					</div>
+					<div id="refine" class="refine-search">
+						<label class="label-left">Refine flight search</label>
+						<div>
+						    <rzslider class="custom-slider" rz-slider-model="slider.min" rz-slider-high="slider.max" rz-slider-options="slider.options"></rzslider>
+						</div>					
+					</div>
+				</div>
 			 </div>
 		</div>
 		<div class="eight columns left">
-				<div class="row corn">
-					<div class="twelve columns">
-						<div class="searchTitle">Pune > Delhi > Pune</div>
+			<div class="row corn">
+				<div class="twelve columns">
+					<div class="searchTitle">Pune > Delhi > Pune</div>
+					<div class="row" ng-repeat="flights in filterdFlights track by flightid" search-results>
 					</div>
 				</div>
-				<div class="row">
-					<div class="twelve columns" style="border:1px solid black;">
-						Hello, welcome to the fight
-					</div>
-				</div>				
-			
+			</div>
+			<div class="row">
+				<div class="twelve columns" style="border:1px solid black;">
+					Hello, welcome to the fight
+				</div>
+			</div>					
 		</div>
 	</div>	
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<!-- End Document
+	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<script>
-	  $( function() {
-	    $( "#tabs" ).tabs();
-	  } );
-  	</script>  
+	<!-- Scripts
+	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<script>
+		  $( function() {
+		    $( "#tabs" ).tabs();
+		  } );
+	  	</script>  
 
-</body>
-</html>
+	</body>
+	</html>

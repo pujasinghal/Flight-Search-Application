@@ -1,0 +1,21 @@
+<div class="eight columns">
+	<h2>{{flights.price | currency:'&#8360;'}}</h2>
+	<div class="row">
+		<div class="six columns oneWay">
+			<label>{{ flightNumberOne}}</label>
+			<label>{{fromAirportValue}} > {{toAirportValue}}</label>
+			<label>Depart: {{depTimeOne}}</label>
+			<label>Arrive: {{arrTimeOne}}</label>		
+		</div>
+		<div class="six columns twoWay" ng-hide="returnShow">
+			<label>{{ flightNumberTwo}}</label>
+			<label>{{toAirportValue}} > {{fromAirportValue}}</label>
+			<label>Depart: {{depTimeTwo}}</label>
+			<label>Arrive: {{arrTimeTwo}}</label>		
+		</div>		
+	</div>
+</div>
+<div class="four columns">
+	<img src"images/logo.jpg" alt= "Flight logo"/>
+	<button id="bookFlight" ng-click="bookFlight()">Book this flight</button>
+</div>
