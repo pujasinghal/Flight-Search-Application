@@ -10,21 +10,25 @@
 
 /* General Content
 –––––––––––––––––––––––––––––––––––––––––––––– */
-.green { background-color: #7accc8; }
-.left { margin-left: 0%; }
-.corn { background-color: cornsilk;}
+.green { background-color: purple; }
+.left { margin-left: 0%; margin-top: -1%;}
+.corn { background-color: antiquewhite;}
 .form-group { width: 100%; }
 .row { padding: 2%;}
-#search { border: 1px solid black; }
+#search {     
+    background: lightslategrey;
+    border: 3px solid purple;}
 
 .refine-search {    
 	margin-top: 5%;
-    border: 1px solid black;
+    background: aliceblue;
 }
 .label-left {
-	font-size: 1.1em;
-    font-weight: normal;
     padding-left: 4%;
+    font-family: 'Satisfy', cursive;
+    font-weight: bold;
+    font-size: 1.6em;  
+    color: crimson;  
 }
 .range-left {
 	margin: 4%;
@@ -46,9 +50,51 @@
 	left: 0;
 	cursor: default;
 }
+.row-margin { margin: 4% 0;}
+.has-error { 
+	color: red;
+	font-weight: normal; 
+}
+.yellow {
+	color: unset; 
+	font-size: 1em;
+}
+#bookFlight { 
+	float: right; 
+	margin-left: 63%;
+}
+.search-result {
+	font-family: 'Open Sans', sans-serif;color: slategrey;
+}
+.partition {
+	border-right: 1px solid darkgray;
+}
+
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––– */
-
+.font7 { 
+	font-size: 0.9em; 
+	font-weight: bold; 
+}
+.font9 { 
+	font-size: 1.1em; 
+	font-weight: bold;
+}
+.search-title { 
+    font-size: 1.8em;
+    text-align: left;
+    padding: 4%;
+    color: purple;
+    font-family: 'Satisfy', cursive;
+    font-weight: bold;
+}
+.search-dates {
+	margin-top: 4%;
+	font-family: 'Satisfy', cursive;
+	color: darkblue;
+    font-size: 1em;
+}
+.font-normal {font-weight: normal;}
 
 /* Header & Navigation
 –––––––––––––––––––––––––––––––––––––––––––––– */

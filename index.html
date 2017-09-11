@@ -17,19 +17,18 @@
 	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	  <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
 	  <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	  
 	   <!-- CSS
 	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	  <link rel="stylesheet" href="css/normalize.css">
 	  <link rel="stylesheet" href="css/skeleton.css">
 	  <link rel="stylesheet" href="css/style.css">
-	  	  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css"  rel="stylesheet" type="text/css">
+	  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css"  rel="stylesheet" type="text/css">
 	  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.4.0/rzslider.min.css">
 	  <link rel="stylesheet" href="css/custom-slider-style.css">
-	<!--   <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
-	  <link rel="stylesheet" href="css/magnific-popup.css"> -->
+	  <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
 	  
 	  <!-- Scripts
 	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
@@ -41,10 +40,6 @@
 	  <script src="scripts/controller/flightApp.js"></script>
 	  <script src="scripts/directives/autocomplete.js"></script>	  
 	  <script src="scripts/directives/searchResults.js"></script>
-		
-	  <!-- Favicon
-	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<!--   <link rel="icon" type="image/png" href="images/favicon.png"> -->
 
 	  <!-- Inline Style
 	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -56,6 +51,10 @@
 		.ui-tabs .ui-tabs-nav {
 		    padding: 0;
 		}	
+
+		    background: cadetblue;
+    font-size: 1em;
+    font-weight: bold;
 
 	  </style>
 	</head>
@@ -74,13 +73,13 @@
 			<div class="twelve columns">
 				<div id="tabs">
 					<ul>
-					    <li><a href="#search" ng-click="returnDate(true)">OneWay</a></li>
-						<li><a href="#search" ng-click="returnDate(false)">Return</a></li>
+					    <li style="background:cadetblue;font-size: 1em;font-weight: bold;"><a href="#search" ng-click="returnDate(true)">OneWay</a></li>
+						<li style="background:cadetblue;font-size: 1em;font-weight: bold;"><a href="#search" ng-click="returnDate(false)">Return</a></li>
 					</ul>
 					<div id="search" class="border-form">						
 						<input id="fromAirport" class="form-group" type="text" placeholder="Enter Origin City" required auto-complete ng-change="autoComplete(true,false)" ng-model="searchFromCity" />
 						<input id="toAirport" class="form-group" type="text" placeholder="Enter Destination City"auto-complete ng-change="autoComplete(false,true)" ng-model="searchToCity" required />
-						<input id="depDate" class="form-group" type="text" placeholder="Departure Date" onfocus="(this.type='date')" onblur="(this.type='text')" ng-model="depDate.value" ng-change="getDate()" required /> 
+						<input id="depDate" class="form-group" type="text" placeholder="Departure Date" onfocus="(this.type='date')" onblur="(this.type='text')" ng-model="depDate.value" required /> 
 						<input id="retDate" class="form-group" type="text" placeholder="Return Date" onfocus="(this.type='date')" onblur="(this.type='text')" ng-model="arrDate.value" required ng-disabled="returnShow"/>
 						<input id="passengers" class="form-group" type="number" placeholder="Passengers" ng-model="passengersNo" min=1 max=10>
 						<button id="btnSearch" ng-click="searchFlight()">Search</button>					
@@ -94,20 +93,40 @@
 				</div>
 			 </div>
 		</div>
-		<div class="eight columns left">
-			<div class="row corn">
-				<div class="twelve columns">
-					<div class="searchTitle">Pune > Delhi > Pune</div>
-					<div class="row" ng-repeat="flights in filterdFlights track by flightid" search-results>
+		<div class="eight columns left" ng-show="showResults">
+			<div class="row">
+				<div class="twelve columns corn" ng-hide="noData">
+					<div class="eight columns font14 search-title">
+					<span>{{selFromCity[0].cityName}} &gt; </span>
+					<span>{{selToCity[0].cityName}} </span>
+					<span ng-hide="returnShow">&gt; {{selFromCity[0].cityName}}
+					</span> &nbsp;
+					<span class="yellow"><i class="fa fa-plane" aria-hidden="true"></i></span>
 					</div>
-				</div>
+					<div class="four columns font9 search-dates">
+					<label>Depart : {{depDate.value | date:'dd, MMM yyyy'}}</label>
+					<label ng-hide="returnShow">Arrive : {{arrDate.value | date:'dd, MMM yyyy'}}
+					</label>
+					</div>					
+				</div>					
 			</div>
 			<div class="row">
-				<div class="twelve columns" style="border:1px solid black;">
-					Hello, welcome to the fight
+				<div class="twelve columns corn" ng-hide = "noData"> 
+					<button id="bookFlight" ng-disabled="true" ng-click="bookFlight()">Book this flight</button>
+					<div class="row search-result">
+						<div class="six columns" ng-class="{'partition': returnShow==false}">
+							<div class="row row-margin" search-results ng-repeat="flight in oneWayData"></div>
+						</div>
+						<div class="six columns" ng-hide="returnShow">
+							<div class="row row-margin" search-results ng-repeat="flight in twoWayData"></div>
+						</div>
+					</div>
+				</div>	
+				<div class="twelve columns corn" ng-show = "noData">
+					<h5 style="color:red;">No flights available !! </h5>
 				</div>
-			</div>					
-		</div>
+			</div>
+		</div>					
 	</div>	
 
 	<!-- End Document

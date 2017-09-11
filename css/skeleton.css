@@ -63,7 +63,7 @@
   .one.columns                    { width: 4.66666666667%; }
   .two.columns                    { width: 13.3333333333%; }
   .three.columns                  { width: 22%;            }
-  .four.columns                   { width: 30.6666666667%; }
+  .four.columns                   { width: 26.666667%; }
   .five.columns                   { width: 39.3333333333%; }
   .six.columns                    { width: 48%;            }
   .seven.columns                  { width: 56.6666666667%; }
@@ -342,7 +342,11 @@ td:last-child {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button,
 .button {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem; 
+  font-size: 1em;
+  color: black;
+  background: cadetblue;
+}
 input,
 textarea,
 select,
